@@ -9,7 +9,7 @@
 
 Install dependencies:
 ```bash
-pipenv install -r requirement.txt
+pipenv install -r requirements.txt
 ```
 
 ## Running
@@ -36,7 +36,7 @@ Populate at minimum:
 - `IG_ASBD_ID` (defaults to `129477`)
 - `IG_GRAPHQL_DOC_ID` (`32820268350897851`) # seen from live requests
 - `IG_GRAPHQL_QUERY_HASH` (`8c2a529969ee035a5063f2fc8602a0fd`)
-- `X_IG_APP_ID` 
+- `X_IG_APP_ID`
 
 ```
 

@@ -17,7 +17,7 @@ class ScraperSettings:
         return cls(
             cookie=os.getenv("COOKIE", ""),
             x_ig_app_id=os.getenv("X_IG_APP_ID"),
-            asbd_id=os.getenv("IG_ASBD_ID"),
+            asbd_id=os.getenv("IG_ASBD_ID", "129477"),
             graphql_lsd=os.getenv("IG_LSD"),
             graphql_doc_id=os.getenv("IG_GRAPHQL_DOC_ID", "32820268350897851"),
             graphql_query_hash=os.getenv(
