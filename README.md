@@ -12,21 +12,11 @@ Install dependencies:
 pipenv install -r requirements.txt
 ```
 
-## Running
-```bash
-pipenv run python -m scraper.main <instagram_username>
-or
-pipenv run python -m scraper.main lilbieber > sample_output/lilbieber.json
-```
+## Configure Environment
+Set your credentials before executing any scraper commands.
 
-Example:
-```bash
-pipenv run python -m scraper.main lilbieber
-```
-Outputs JSON with a `profile` section and an array of normalized `posts`.
-
-### Environment
-Create a `.env` file in the repo root and export it before running:
+1. Create a `.env` file in the repo root.
+2. Populate it with at least the following values (real values copied from browser requests):
 
 ```
 Populate at minimum:
@@ -39,6 +29,24 @@ Populate at minimum:
 - `X_IG_APP_ID`
 
 ```
+  #Use virtual enviroment
+```
+pipenv shell
+```
+
+## Running
+Once the `.env` variables are loaded, run:
+```bash
+pipenv run python -m scraper.main <instagram_username>
+or
+pipenv run python -m scraper.main lilbieber > sample_output/lilbieber.json
+```
+
+Example:
+```bash
+pipenv run python -m scraper.main lilbieber
+```
+Outputs JSON with a `profile` section and an array of normalized `posts`.
 
 ### Optional arguments
 - Adjust `min_posts` by calling `InstagramScraper().scrape(username, min_posts=200)` inside your own script.
